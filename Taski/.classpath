@@ -12,5 +12,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/asdf1/eclipse-workspace/Taski/jdatepicker-1.3.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/asdf1/Documents/GitHub/Taski/Taski/sqlite-JDBC/sqlite-jdbc-3.42.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

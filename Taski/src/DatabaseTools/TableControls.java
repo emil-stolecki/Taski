@@ -6,8 +6,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class TableControls {
-	//static String dbUrl = "jdbc:sqlite:/C:\\Users\\asdf1\\eclipse-workspace\\Taski\\src\\database.db";
+	
 	static String dbUrl = "jdbc:sqlite:..\\database.db";
+	//static String dbUrl = "jdbc:sqlite:../database.db";
 	public static void create() {
 		
 		 try (Connection con = DriverManager.getConnection(dbUrl);
