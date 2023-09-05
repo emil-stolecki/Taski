@@ -13,13 +13,12 @@
 
 <img src="./images/preview3.png">
 
-
 <p>The user can use three views: day- the default view, week, and month.</p>
 <img src="./images/preview4.png">
 <img src="./images/preview5.png">
 <p>The user can choose a day in the week or month view to jump to.</p>
 
-<p>The user can see all tasks, edit their titles and descriptions directly in the table, or edit the rest after being redirected to this task in a day view.</p>
+<p>The user can see all tasks, edit their titles and descriptions directly in the table, or edit the rest after being redirected to this task in a day view. The user can set the maximum amount of records that are loaded from the database and displayed at once</p>
 <img src="./images/preview6.png">
 
 <p>The user can also access the task's edit mode by clicking it on the timeline or picking it from the panel on the right.</p>
@@ -35,5 +34,8 @@
 </ul>
 <h3>Third-Party Libraries</h3>
 <p>JDatePicker by <a href="https://github.com/JDatePicker/JDatePicker">JUAN HEYNS</a> on BSD license</p>
+
+<h3>Structure</h3>
+<p>Tasks and days are represented by classes. Their fields are modified by the user with the graphic interface. When the user performs an action, modifications to the fields of the classes and modifications to the records in the database are done independently if they are necessary. The database is accessed manually by the class CRUD, supported by the class Utilities. The class DatabaseBridge converts task models to data accepted by the CRUD methods and creates task models based on data retrieved from the database.</p>
 
 <p>Requirements: The application runs on Windows with Java version 8 minimum.</p>
