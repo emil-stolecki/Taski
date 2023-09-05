@@ -27,13 +27,15 @@ public class Warnings extends JPanel{
 			//overlap= new JLabel("Warning: Some events or Tasks overlap eachother");
 			add(overlap);
 			isoverlap=true;
-			
+			revalidate(); 
+		    repaint();
 		}		
 		
 	}
 	public void noOverlapWarning() {
 		isoverlap=false;
-		remove(overlap);
+		//remove(overlap);
+		removeAll();
 		revalidate(); 
 	    repaint();
 	}

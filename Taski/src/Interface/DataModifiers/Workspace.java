@@ -532,6 +532,7 @@ public class Workspace extends JPanel{
 	            if(addButton.getActionListeners().length>0) {
 	            	addButton.removeActionListener(addButton.getActionListeners()[0]);
 	    		}
+	            addButton.addActionListener(invalidinputListener);
 	            addButton.addActionListener(new ActionListener() {
 
 					@Override

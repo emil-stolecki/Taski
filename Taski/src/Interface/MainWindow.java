@@ -60,8 +60,6 @@ public class MainWindow extends JFrame{
         	OptsViewPanel.warnings.overlapWarning(); 
         }
         
-        
-        
         add(main);
         main.setLayout(new BoxLayout(main, BoxLayout.X_AXIS));
         main.add(day);
@@ -98,6 +96,15 @@ public class MainWindow extends JFrame{
 		
 		Workspace.updateDay(days[displayDay]);
 		
+		if(days[displayDay].checkNoOverlap()) {
+        	OptsViewPanel.warnings.noOverlapWarning(); 
+        	
+        }
+        else {
+        	OptsViewPanel.warnings.overlapWarning(); 
+        	
+        	
+        }
 	}
 	public static void nextDay() {
 		if(displayDay<2*range) {
@@ -120,6 +127,14 @@ public class MainWindow extends JFrame{
 		Workspace.updateDay(days[displayDay]);
 		Sidebar.refreshPotentialTasks(days[displayDay]);
 		
+		if(days[displayDay].checkNoOverlap()) {
+        	OptsViewPanel.warnings.noOverlapWarning(); 
+        	
+        }
+        else {
+        	OptsViewPanel.warnings.overlapWarning(); 
+        	
+        }
 	}
 	
 	public static void makeshortcut(TaskInstance ti) {		
