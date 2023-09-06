@@ -428,7 +428,7 @@ public class Workspace extends JPanel{
 	    		            task.editModeInput.removeAll();
 	    		            
 	    		            if(selectedMode=="weekly") {
-	    		     			task.addField(task.editModeLabel,"Select days ", task.font, theme );
+	    		     			task.addField(task.editModeLabel,"Select days ", task.font, Color.gray );
 	    		     			JPanel row=new JPanel();
 	    		     			JPanel col1=new JPanel();
 	    		     			col1.setLayout(new BoxLayout(col1,BoxLayout.Y_AXIS));
@@ -448,7 +448,7 @@ public class Workspace extends JPanel{
 	    		     			task.editModeInput.add(row);
 	    		     			
 	    		     			JPanel line6 = new JPanel();
-	    		    			line6.setBackground(theme);
+	    		    			line6.setBackground(Color.gray);
 	    		    			line6.setPreferredSize(new Dimension(300,1));
 	    		    			line6.setMaximumSize(new Dimension(Integer.MAX_VALUE,1));
 	    		    			task.editModeInput.add(Box.createRigidArea(new Dimension(0,5)));
@@ -487,7 +487,7 @@ public class Workspace extends JPanel{
 	    		     	        col7.add(task.sun);
 	    		     		}
 	    		     		else if (selectedMode=="monthly") {
-	    		     			task.addField(task.editModeLabel,"Select days ", task.font, theme );
+	    		     			task.addField(task.editModeLabel,"Select days ", task.font, Color.gray );
 	    		     			task.setMonthDays = new JTextPane();
 	    		     			String display ="";	    		     			
 	    		     			
@@ -508,7 +508,7 @@ public class Workspace extends JPanel{
 	    		     			task.editModeInput.add(Box.createRigidArea(new Dimension(0,5)));
 	    		     		}
 	    		     		else if (selectedMode=="oneTime") {
-	    		     			task.addField(task.editModeLabel,"When", task.font, theme );
+	    		     			task.addField(task.editModeLabel,"When", task.font, Color.gray );
 	    		     					     			
 	    		     			UtilDateModel model = new UtilDateModel();
 	    		     			Properties p = new Properties();
@@ -622,9 +622,9 @@ public class Workspace extends JPanel{
 								CRUD.add(TaskType.SimpleTask,st);
 								
 								if(tmpLDTP.toLocalDate().equals(Sidebar.getDay().getDate())&&task.usePrefered.isSelected()) {	
-									
-									TaskInstance ti=TimeLine.assignTask(t);	
-									MainWindow.makeshortcut(ti);
+							
+								TaskInstance ti=TimeLine.assignTask(t);	
+								MainWindow.makeshortcut(ti);
 									
 								}
 									
@@ -738,7 +738,7 @@ public class Workspace extends JPanel{
 
 							
 							CRUD.add(TaskType.Event,DataBaseBridge.eventToArray(ev));
-														
+							//							
 							isCorrectInput=true;
 							}
 							catch(Exception exc){					

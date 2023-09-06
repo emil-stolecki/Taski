@@ -99,6 +99,7 @@ public class TimeLine extends JPanel{
     			0,0);
 		
 		ti.updateInstance();
+		
 		atasks.add(ti);
 		return ti;
 	}

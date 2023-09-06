@@ -145,11 +145,11 @@ public class TaskInstance extends JPanel {
         	int offsetBottom=event.getEnd().getHour()*hourSpace+event.getEnd().getMinute()*hourSpace/60;
     		setBounds(r.x ,margin+offsetTop+5, r.width, offsetBottom-offsetTop);
 		}
-		else if (type==TaskType.SimpleTask) {
-			
+		else if (type==TaskType.SimpleTask) {			
 			this.title.setText(task.getTitle());
 			int offsetTop=task.getPreffered().getHour()*hourSpace+task.getPreffered().getMinute()*hourSpace/60; 
 			int duration=(int)task.getDuration().toMinutes()*hourSpace/60;
+			if(duration==0)duration=30;//default
     		setBounds(r.x ,margin+offsetTop+5, r.width, duration);
 			
 		}
