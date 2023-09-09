@@ -44,7 +44,9 @@ import tasksPackage.EnumFolder.TaskType;
 import tasksPackage.StoragesFolder.Day;
 import tasksPackage.TaskFolder.Event;
 import tasksPackage.TaskFolder.SimpleTask;
+import tasksPackage.TaskFolder.Task;
 import tasksPackage.other.DataBaseBridge;
+import tasksPackage.other.TimeFrame;
 
 public class Workspace extends JPanel{
 	
@@ -618,14 +620,12 @@ public class Workspace extends JPanel{
 									st[9]="0";
 								}
 								
-								
 								CRUD.add(TaskType.SimpleTask,st);
-								
 								if(tmpLDTP.toLocalDate().equals(Sidebar.getDay().getDate())&&task.usePrefered.isSelected()) {	
 							
 								TaskInstance ti=TimeLine.assignTask(t);	
 								MainWindow.makeshortcut(ti);
-									
+								MainWindow.reloadDays()	;
 								}
 									
 								
@@ -735,9 +735,11 @@ public class Workspace extends JPanel{
 									
 								}
 								
-
-							
+								
+								
+									
 							CRUD.add(TaskType.Event,DataBaseBridge.eventToArray(ev));
+							MainWindow.reloadDays();
 							//							
 							isCorrectInput=true;
 							}

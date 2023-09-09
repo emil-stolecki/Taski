@@ -521,6 +521,7 @@ public class MainWindow extends JFrame{
             	}
             	i++;
         	}
+        	
         	ti=new TaskInstance(days[displayDay-1].getPotentialTask(i-1),0,0,0,0);
         }
        
@@ -534,5 +535,7 @@ public class MainWindow extends JFrame{
 	public static int getMainHeigth() {
 		return main.getHeight();
 	}
-	
+	public static void reloadDays() {
+		days=Reloader.reload(days);
+	}
 }

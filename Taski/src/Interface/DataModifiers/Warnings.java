@@ -43,6 +43,7 @@ public class Warnings extends JPanel{
 			
 	    isBadInput=false;
 		remove(badInput);
+		add(new JLabel("Task added"));
 		revalidate(); 
 	    repaint();	 
 		
